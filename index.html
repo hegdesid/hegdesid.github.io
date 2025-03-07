@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sid Hegde</title>
+    <title>Sid Hegde - Personal Website</title>
 
     <!-- Import Italiana font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
@@ -27,16 +27,30 @@
             z-index: 2;
             position: relative;
         }
-
         h1 {
             font-family: 'Italiana', serif;
-            font-size: 200px;
+            font-size: 12vw; /* Adjust based on viewport width */
             color: red;
             text-transform: uppercase;
             padding: 1px;
             border-top: 2px solid red;
             border-bottom: 2px solid red;
+            white-space: nowrap; /* Prevents breaking into multiple lines */
         }
+
+        /* Adjust font size for smaller screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 15vw;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 18vw;
+            }
+        }
+
 
         nav {
             text-align: center;
@@ -152,9 +166,9 @@
     <!-- Work Section -->
     <section id="work">
         <div class="description"><span style="text-align: center;">
-        <p>Distributed Sensor Array for Space Weather Characterization: <span style="color: red;">pdf</span></p>
+        <p>Distributed Sensor Array for Space Weather Characterization: <a href="Distributed Sensor Array for ​Space Weather Characterization​.pdf" target="_blank" style="color: red; text-decoration: none;">PDF</a></p>
         <div class="description"><span style="text-align: center;">
-        <p>Flexible Ground Suite - RF: <span style="color: red;">pdf</span></p>
+        <p>Flexible Ground Suite - RF: <a href="Flexible Ground Suite - RF.pdf" target="_blank" style="color: red; text-decoration: none;">PDF</a></p>
         </div></span>
     </section>
 

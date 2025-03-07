@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sid Hegde - Personal Website</title>
+
+    <!-- Import Italiana font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+
+    <style>
+        /* Fullscreen black background */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            background: black;
+            color: #333;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Header styling */
+        header {
+            text-align: center;
+            margin-top: 100px;
+            z-index: 2;
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Italiana', serif;
+            font-size: 200px;
+            color: red;
+            text-transform: uppercase;
+            padding: 1px;
+            border-top: 2px solid red;
+            border-bottom: 2px solid red;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+            z-index: 2;
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            font-size: 18px;
+            margin: 0 20px;
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        nav a:hover {
+            color: red;
+        }
+
+        /* About, Work, and Contact Section Styling */
+        section {
+            display: none;
+            padding: 10px;
+            color: white;
+            font-size: 18px;
+            text-align: left;
+            margin: 0 100px;
+        }
+
+        h2 {
+            font-family: 'Italiana', serif;
+            font-size: 40px;
+            color: red;
+            border-bottom: 2px solid red;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 100px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Contact Form Styling */
+        form {
+            margin-top: 20px;
+            font-size: 16px;
+            color: white;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            background-color: black;
+            color: white;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: darkred;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SID HEGDE</h1>
+    </header>
+
+    <nav>
+        <a href="#" data-section="about" onclick="showSection('about')">About Me</a>
+        <a href="#" data-section="contact" onclick="showSection('contact')">Contact</a>
+        <a href="#" data-section="work" onclick="showSection('work')">Work</a>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="description">
+            <p>Cadet at the United States Military Academy. Electrical Engineering. Enjoys reading, flying FPV, working on things.</p>
+            <p>Men who have made these discoveries before us are not our masters, but our guides. Truth lies open for all; it has not yet been monopolized. And there is plenty of it left even for posterity to discover. (Seneca)</p>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work">
+        <div class="description"><span style="text-align: center;">
+        <p>Distributed Sensor Array for Space Weather Characterization: <span style="color: red;">pdf</span></p>
+        <div class="description"><span style="text-align: center;">
+        <p>Flexible Ground Suite - RF: <span style="color: red;">pdf</span></p>
+        </div></span>
+    </section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="description"><span style="text-align: center;">
+        <p><span style="font-weight: 900;">Email:</span> <span style="color: red; cursor: pointer;" onclick="copyToClipboard('1@hegdesid.com')">1@hegdesid.com</span></p>
+        <p><span style="font-weight: 900;">Matrix:</span> <span style="color: red; cursor: pointer;" onclick="copyToClipboard('@hegdesid:matrix.org')">@hegdesid:matrix.org</span></p>
+        <pre style="color: #888; padding: 10px; font-size: 14px; white-space: pre-wrap; word-wrap: break-word;">
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+xjMEZ4RumxYJKwYBBAHaRw8BAQdAIDARlNaeCDzLrn7vT7zNvKsQwn7c6vxc
+4mfKBeADj7TNH3NpZGhlZ2RlQHBtLm1lIDxzaWRoZWdkZUBwbS5tZT7CwBEE
+ExYKAIMFgmeEbpsDCwkHCZDftgokM2zjtEUUAAAAAAAcACBzYWx0QG5vdGF0
+aW9ucy5vcGVucGdwanMub3JnnmwMJE3sZ8QjYB/urWj24BVLUUVrH8S5qZdn
+R4jfqbQDFQoIBBYAAgECGQECmwMCHgEWIQQUT1Wt+wgqPXJnrenftgokM2zj
+tAAAQ0sBAOIYrvdyZTmsP59rW8kP3FUWpTsPLbA9VLf+FWKNN7HGAQCN/3D1
+OBRKU888ssx7wez2zdNcLOSQPBwHA+GUvA5kDc44BGeEbpsSCisGAQQBl1UB
+BQEBB0C3rbT/W3WMn4esVrHPzkolWUKfJ3xWJDXR9Ivqy9kODwMBCAfCvgQY
+FgoAcAWCZ4RumwmQ37YKJDNs47RFFAAAAAAAHAAgc2FsdEBub3RhdGlvbnMu
+b3BlbnBncGpzLm9yZ48j+XhhHiTna5JxcfR7M7ME+oI49dnnRCVFemh2kRhf
+ApsMFiEEFE9VrfsIKj1yZ63p37YKJDNs47QAAE9GAP9ozLL30lA9nSePnV6q
+8lvp3p/ZV5/k08PuXUqipgJGqwEArYc9A3rUCToBA2AVNEh3iEZA/Qr1fNh4
+Tjm75uPj4Q4=
+=Q2OO
+-----END PGP PUBLIC KEY BLOCK-----
+        </pre></span>
+    </div>
+</section>
+
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => section.style.display = 'none');
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+
+            // Reset styles for all links
+            document.querySelectorAll('nav a').forEach(link => {
+                link.style.color = 'white';
+                link.style.textDecoration = 'none';
+            });
+
+            // Highlight the active link
+            const activeLink = document.querySelector(`nav a[data-section="${sectionId}"]`);
+            if (activeLink) {
+                activeLink.style.color = 'red';
+                activeLink.style.textDecoration = 'underline';
+            }
+        }
+
+        // Do NOT show any section by default
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('section').forEach(section => section.style.display = 'none');
+        });
+                function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+            }).catch(err => {
+            });
+        }
+    </script>
+
+</body>
+</html>

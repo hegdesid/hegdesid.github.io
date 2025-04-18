@@ -1,259 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Sid Hegde | Cadet at United States Military Academy | Electrical Engineering">
-<meta name="keywords" content="Sid Hegde, Electrical Engineering, FPV, Space Weather, Sensor Array, Tech">
-<meta name="author" content="Sid Hegde">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sid Hegde</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Italiana&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sid Hegde | Cadet at United States Military Academy | Electrical Engineering">
+  <meta name="keywords" content="Sid Hegde, Electrical Engineering, FPV, Space Weather, Sensor Array, Tech">
+  <meta name="author" content="Sid Hegde">
+  <title>Sid Hegde</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Italiana&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: black;
+      color: #333;
+      overflow: hidden;
+    }
+
+    header {
+      text-align: center;
+      margin-top: 1px;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-family: 'Italiana', serif;
+      font-size: 5vw;
+      color: #2657eb;
+      text-transform: uppercase;
+      padding: 1px;
+      border-top: 2px solid #2657eb;
+      border-bottom: 2px solid #2657eb;
+      white-space: nowrap;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 20px;
+      z-index: 2;
+      position: relative;
+    }
+
+    nav a {
+      color: white;
+      font-size: 18px;
+      margin: 0 20px;
+      text-decoration: none;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: #2657eb;
+    }
+
+    section {
+      display: none;
+      padding: 10px;
+      color: white;
+      font-size: 18px;
+      text-align: left;
+      margin: 0 100px;
+    }
+
+    h2 {
+      font-size: 80px;
+      color: #2657eb;
+      border-bottom: 2px solid #2657eb;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      margin: 20px auto;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #ddd;
+      text-align: center;
+      max-width: 800px;
+    }
+    .description2 {
+      margin: 20px auto;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #ddd;
+      text-align: left;
+      max-width: 2000px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 100px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      background-color: black;
+      color: white;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #2657eb;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: dark#2657eb;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 12vw;
+      }
+      nav {
+        margin-top: 15px;
+      }
+      nav a, section {
+        font-size: 16px;
+        margin: 0 50px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 14vw;
+      }
+      nav a {
+        font-size: 14px;
+        margin: 0 10px;
+      }
+      section {
+        margin: 0 20px;
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 
-<style>
-/* Fullscreen black background */
-body {
-margin: 0;
-padding: 0;
-font-family: 'M', Courier, monospace;
-background: black;
-color: #333;
-overflow: hidden;
-position: relative;
-}
-
-/* Header styling */
-header {
-text-align: center;
-margin-top: 1px;
-z-index: 2;
-position: relative;
-}
-h1 {
-font-family: 'Italiana', serif;
-font-size: 12vw; /* Adjust based on viewport width */
-color: red;
-text-transform: uppercase;
-padding: 1px;
-border-top: 2px solid red;
-border-bottom: 2px solid red;
-white-space: nowrap; /* Prevents breaking into multiple lines */
-}
-
-/* Adjust font size and margins for smaller screens */
-@media (max-width: 768px) {
-h1 {
-font-size: 12vw;
-}
-nav {
-margin-top: 15px;
-}
-nav a {
-font-size: 16px;
-}
-section {
-margin: 0 50px;
-font-size: 16px;
-}
-}
-
-@media (max-width: 480px) {
-h1 {
-font-size: 14vw;
-}
-nav {
-margin-top: 10px;
-}
-nav a {
-font-size: 14px;
-margin: 0 10px;
-}
-section {
-margin: 0 20px;
-font-size: 14px;
-}
-}
-
-
-nav {
-text-align: center;
-margin-top: 20px;
-z-index: 2;
-position: relative;
-}
-
-nav a {
-color: white;
-font-size: 18px;
-margin: 0 20px;
-text-decoration: none;
-letter-spacing: 2px;
-text-transform: uppercase;
-font-family: 'Poppins', sans-serif;
-}
-
-nav a:hover {
-color: red;
-}
-
-/* About, Work, and Contact Section Styling */
-section {
-display: none;
-padding: 10px;
-color: white;
-font-size: 18px;
-text-align: left;
-margin: 0 100px;
-font-family: 'Poppins', sans-serif;
-}
-
-h2 {
-font-family: 'Poppins', sans-serif;
-font-size: 40px;
-color: red;
-border-bottom: 2px solid red;
-display: inline-block;
-margin-bottom: 20px;
-}
-
-.description {
-margin-top: 20px;
-font-size: 16px;
-line-height: 1.6;
-color: #ddd;
-}
-
-footer {
-text-align: center;
-margin-top: 100px;
-font-size: 14px;
-color: #666;
-}
-
-
-label {
-display: block;
-margin: 10px 0 5px;
-}
-
-input, textarea {
-width: 100%;
-padding: 10px;
-margin: 10px 0;
-border: 1px solid #ccc;
-background-color: black;
-color: white;
-font-size: 16px;
-}
-
-button {
-padding: 10px 20px;
-background-color: red;
-color: white;
-border: none;
-cursor: pointer;
-font-size: 16px;
-}
-
-button:hover {
-background-color: darkred;
-}
-
-</style>
-</head>
 <body>
+  <header>
+    <h1>SID HEGDE</h1>
+  </header>
 
-<header>
-<h1>SID HEGDE</h1>
-</header>
+  <nav>
+    <a href="#" data-section="about" onclick="showSection('about')">About Me</a>
+    <a href="#" data-section="contact" onclick="showSection('contact')">Contact</a>
+    <a href="#" data-section="work" onclick="showSection('work')">Work</a>
+  </nav>
 
-<nav>
-<a href="#" data-section="about" onclick="showSection('about')">About Me</a>
-<a href="#" data-section="contact" onclick="showSection('contact')">Contact</a>
-<a href="#" data-section="work" onclick="showSection('work')">Work</a>
-</nav>
+  <section id="about">
+    <div class="description2">
+      <p>Electrical Engineering student at West Point. Expected to commission May 2026. Enjoys reading, flying FPV, firearms, and working on things.</p>
+      <p>"Men who have made these discoveries before us are not our masters, but our guides. Truth lies open for all; it has not yet been monopolized. And there is plenty of it left even for posterity to discover." (Seneca)</p>
+    </div>
+  </section>
 
-<!-- About Me Section -->
-<section id="about">
-<div class="description">
-<p>Cadet at the United States Military Academy. Electrical Engineering. Enjoys reading, flying FPV, working on things.</p>
-<p>Men who have made these discoveries before us are not our masters, but our guides. Truth lies open for all; it has not yet been monopolized. And there is plenty of it left even for posterity to discover. (Seneca)</p>
-</div>
-</section>
+  <section id="work">
+    <div class="description">
+      <p>Space and Missile Defense Command Technical Center: <span style="color: gray">Redstone Arsenal, Alabama; Summer 2023.</span></p>
+      <p>3rd Multi-Domain Task Force. Space Control Team: <span style="color: gray">Okinawa Prefecture, Japan; Summer 2024.</span></p>
+      <p>Distributed Sensor Array for Space Weather Characterization: 
+        <a href="Distributed Sensor Array for ​Space Weather Characterization​.pdf" target="_blank" style="color: grey;">PDF</a>
+      </p>
+      <p>Flexible Ground Suite - RF: 
+        <a href="Flexible Ground Suite - RF.pdf" target="_blank" style="color: grey;">PDF</a>
+      </p>
+    </div>
+  </section>
 
-<!-- Work Section -->
-<section id="work">
-<div class="description"><span style="text-align: center;">
-<p>Distributed Sensor Array for Space Weather Characterization: <a href="Distributed Sensor Array for ​Space Weather Characterization​.pdf" target="_blank" style="color: red; text-decoration: none;">PDF</a></p>
-<div class="description"><span style="text-align: center;">
-<p>Flexible Ground Suite - RF: <a href="Flexible Ground Suite - RF.pdf" target="_blank" style="color: red; text-decoration: none;">PDF</a></p>
-</div></span>
-</section>
+  <section id="contact">
+    <div class="description">
+      <p><strong>Email:</strong> <span style="color: #2657eb; cursor: pointer;" onclick="copyToClipboard('1@hegdesid.com')">1@hegdesid.com</span></p>
+      <p><strong>Matrix:</strong> <span style="color: #2657eb; cursor: pointer;" onclick="copyToClipboard('@hegdesid:matrix.org')">@hegdesid:matrix.org</span></p>
+      <p><strong>PGP:</strong> <span style="color: #2657eb; cursor: pointer;" onclick="copyToClipboard('-----BEGIN PGP PUBLIC KEY BLOCK-----
+        xjMEZ4RumxYJKwYBBAHaRw8BAQdAIDARlNaeCDzLrn7vT7zNvKsQwn7c6vxc
+        4mfKBeADj7TNH3NpZGhlZ2RlQHBtLm1lIDxzaWRoZWdkZUBwbS5tZT7CwBEE
+        ExYKAIMFgmeEbpsDCwkHCZDftgokM2zjtEUUAAAAAAAcACBzYWx0QG5vdGF0
+        aW9ucy5vcGVucGdwanMub3JnnmwMJE3sZ8QjYB/urWj24BVLUUVrH8S5qZdn
+        R4jfqbQDFQoIBBYAAgECGQECmwMCHgEWIQQUT1Wt+wgqPXJnrenftgokM2zj
+        tAAAQ0sBAOIYrvdyZTmsP59rW8kP3FUWpTsPLbA9VLf+FWKNN7HGAQCN/3D1
+        OBRKU888ssx7wez2zdNcLOSQPBwHA+GUvA5kDc44BGeEbpsSCisGAQQBl1UB
+        BQEBB0C3rbT/W3WMn4esVrHPzkolWUKfJ3xWJDXR9Ivqy9kODwMBCAfCvgQY
+        FgoAcAWCZ4RumwmQ37YKJDNs47RFFAAAAAAAHAAgc2FsdEBub3RhdGlvbnMu
+        b3BlbnBncGpzLm9yZ48j+XhhHiTna5JxcfR7M7ME+oI49dnnRCVFemh2kRhf
+        ApsMFiEEFE9VrfsIKj1yZ63p37YKJDNs47QAAE9GAP9ozLL30lA9nSePnV6q
+        8lvp3p/ZV5/k08PuXUqipgJGqwEArYc9A3rUCToBA2AVNEh3iEZA/Qr1fNh4
+        Tjm75uPj4Q4=
+        =Q2OO
+        -----END PGP PUBLIC KEY BLOCK-----')">Key</span></p>
+    </div>
+  </section>
 
-<!-- Contact Section -->
-<section id="contact">
-<div class="description"><span style="text-align: center;">
-<p><span style="font-weight: 900;">Email:</span> <span style="color: red; cursor: pointer;" onclick="copyToClipboard('1@hegdesid.com')">1@hegdesid.com</span></p>
-<p><span style="font-weight: 900;">Matrix:</span> <span style="color: red; cursor: pointer;" onclick="copyToClipboard('@hegdesid:matrix.org')">@hegdesid:matrix.org</span></p>
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('section').forEach(section => section.style.display = 'none');
+      document.getElementById(sectionId).style.display = 'block';
+      document.querySelectorAll('nav a').forEach(link => {
+        link.style.color = 'white';
+        link.style.textDecoration = 'none';
+      });
+      const activeLink = document.querySelector(`nav a[data-section="${sectionId}"]`);
+      if (activeLink) {
+        activeLink.style.color = '#2657eb';
+        activeLink.style.textDecoration = 'underline';
+      }
+    }
 
-<p><span style="font-weight: 900;">PGP:</span> <span style="color: red; cursor: pointer;" onclick="copyToClipboard('-----BEGIN PGP PUBLIC KEY BLOCK-----
-xjMEZ4RumxYJKwYBBAHaRw8BAQdAIDARlNaeCDzLrn7vT7zNvKsQwn7c6vxc
-4mfKBeADj7TNH3NpZGhlZ2RlQHBtLm1lIDxzaWRoZWdkZUBwbS5tZT7CwBEE
-ExYKAIMFgmeEbpsDCwkHCZDftgokM2zjtEUUAAAAAAAcACBzYWx0QG5vdGF0
-aW9ucy5vcGVucGdwanMub3JnnmwMJE3sZ8QjYB/urWj24BVLUUVrH8S5qZdn
-R4jfqbQDFQoIBBYAAgECGQECmwMCHgEWIQQUT1Wt+wgqPXJnrenftgokM2zj
-tAAAQ0sBAOIYrvdyZTmsP59rW8kP3FUWpTsPLbA9VLf+FWKNN7HGAQCN/3D1
-OBRKU888ssx7wez2zdNcLOSQPBwHA+GUvA5kDc44BGeEbpsSCisGAQQBl1UB
-BQEBB0C3rbT/W3WMn4esVrHPzkolWUKfJ3xWJDXR9Ivqy9kODwMBCAfCvgQY
-FgoAcAWCZ4RumwmQ37YKJDNs47RFFAAAAAAAHAAgc2FsdEBub3RhdGlvbnMu
-b3BlbnBncGpzLm9yZ48j+XhhHiTna5JxcfR7M7ME+oI49dnnRCVFemh2kRhf
-ApsMFiEEFE9VrfsIKj1yZ63p37YKJDNs47QAAE9GAP9ozLL30lA9nSePnV6q
-8lvp3p/ZV5/k08PuXUqipgJGqwEArYc9A3rUCToBA2AVNEh3iEZA/Qr1fNh4
-Tjm75uPj4Q4=
-=Q2OO
------END PGP PUBLIC KEY BLOCK-----')">Key</span></p>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('section').forEach(section => section.style.display = 'none');
+    });
 
-</span>
-</div>
-</section>
-
-
-<script>
-function showSection(sectionId) {
-// Hide all sections
-document.querySelectorAll('section').forEach(section => section.style.display = 'none');
-
-// Show the selected section
-document.getElementById(sectionId).style.display = 'block';
-
-// Reset styles for all links
-document.querySelectorAll('nav a').forEach(link => {
-link.style.color = 'white';
-link.style.textDecoration = 'none';
-});
-
-// Highlight the active link
-const activeLink = document.querySelector(`nav a[data-section="${sectionId}"]`);
-if (activeLink) {
-activeLink.style.color = 'red';
-activeLink.style.textDecoration = 'underline';
-}
-}
-
-// Do NOT show any section by default
-document.addEventListener("DOMContentLoaded", function() {
-document.querySelectorAll('section').forEach(section => section.style.display = 'none');
-});
-function copyToClipboard(text) {
-navigator.clipboard.writeText(text).then(() => {
-}).catch(err => {
-});
-}
-</script>
-
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text);
+    }
+  </script>
 </body>
 </html>

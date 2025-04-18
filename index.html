@@ -53,10 +53,27 @@
       text-decoration: none;
       letter-spacing: 2px;
       text-transform: uppercase;
+      position: relative;
+      display: inline-block;
+      
     }
 
-    nav a:hover {
-      color: #2657eb;
+    nav a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        bottom: -5px;
+        background-color: #2657eb;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease;
+    }  
+
+    nav a:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
     }
 
     section {
@@ -125,7 +142,7 @@
     }
 
     button:hover {
-      background-color: dark#2657eb;
+      background-color: #2657eb;
     }
 
     @media (max-width: 768px) {
@@ -148,6 +165,7 @@
       nav a {
         font-size: 14px;
         margin: 0 10px;
+        transition: color 0.3s ease;
       }
       section {
         margin: 0 20px;
@@ -222,7 +240,6 @@
       const activeLink = document.querySelector(`nav a[data-section="${sectionId}"]`);
       if (activeLink) {
         activeLink.style.color = '#2657eb';
-        activeLink.style.textDecoration = 'underline';
       }
     }
 

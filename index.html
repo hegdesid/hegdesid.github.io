@@ -1,220 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Sid Hegde | Cadet at United States Military Academy | Electrical Engineering" />
   <title>Sid Hegde</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #000;
-      color: #d0d0d0;
-      line-height: 1.6;
-      overflow-x: hidden;
+    :root { --a:#ff1744; --t:#d0d0d0; }
+
+    body{
+      margin:0; font:16px/1.6 Inter,system-ui,sans-serif;
+      background:#000; color:var(--t); overflow-x:hidden;
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255, 23, 68, 0.15) 1.5px, transparent 1.5px),
-        linear-gradient(90deg, rgba(255, 23, 68, 0.15) 1.5px, transparent 1.5px);
-      background-size: 20px 20px;
-      background-attachment: fixed;
-      transform: perspective(1000px) rotateX(55deg) translateY(50px);
-      transform-origin: top center;
-      z-index: -2;
+    body::before{
+      content:""; position:fixed; inset:0; z-index:-1;
+      background:
+        linear-gradient(rgba(255,23,68,.15) 1.5px, transparent 1.5px),
+        linear-gradient(90deg, rgba(255,23,68,.15) 1.5px, transparent 1.5px);
+      background-size:20px 20px;
+      transform:perspective(1000px) rotateX(55deg) translateY(50px);
+      transform-origin:top;
     }
 
-    header {
-      text-align: center;
-      margin-top: 50px;
+    header{ text-align:center; margin:50px 0 0; }
+    h1{
+      margin:0;
+      font:900 clamp(3rem,7vw,6rem) Orbitron,sans-serif;
+      color:var(--a); letter-spacing:6px; text-transform:uppercase;
+      text-shadow:0 0 12px rgba(255,23,68,.7), 0 0 30px rgba(255,23,68,.5);
     }
 
-    h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: clamp(3rem, 7vw, 6rem);
-      font-weight: 900;
-      color: #ff1744;
-      letter-spacing: 6px;
-      text-transform: uppercase;
-      text-shadow: 0 0 12px rgba(255, 23, 68, 0.7),
-                   0 0 30px rgba(255, 23, 68, 0.5);
-      margin: 0;
+    nav{
+      margin:28px 0 0;
+      display:flex; justify-content:center; gap:28px; flex-wrap:wrap;
     }
 
-    nav {
-      margin-top: 28px;
-      display: flex;
-      justify-content: center;
-      gap: 28px;
-      flex-wrap: wrap;
+    nav a{
+      position:relative;
+      color:var(--t); text-decoration:none; text-transform:uppercase;
+      font-weight:600; letter-spacing:1px; padding:8px 16px;
     }
 
-    nav a {
-      position: relative;
-      color: #d0d0d0;
-      font-weight: 600;
-      letter-spacing: 1px;
-      padding: 8px 16px;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: color 0.3s ease, text-shadow 0.3s ease;
+    nav a::before, nav a::after{
+      content:""; position:absolute; height:2px; background:var(--a);
+      width:0; opacity:0;
+    }
+    nav a::before{ top:0; left:0; }
+    nav a::after{ bottom:0; right:0; }
+
+    nav a:hover{ color:var(--a); text-shadow:0 0 8px var(--a); }
+    nav a:hover::before, nav a:hover::after{ width:100%; opacity:1; }
+
+    section{
+      display:none;
+      max-width:800px; margin:50px auto; padding:26px;
+      background:rgba(10,10,20,.7);
+      border:1px solid rgba(255,23,68,.15);
+      border-left:3px solid var(--a); border-right:3px solid var(--a);
+      border-radius:8px;
+      box-shadow:0 0 10px rgba(255,23,68,.15);
+    }
+    #drone{
+      max-width:800px;
+      min-height:40vh;
+    }
+    section:target{ display:block; }
+    body:not(:has(section:target)) #about{ display:block; }
+
+    /* active tab */
+    body:has(#about:target)  nav a[href="#about"],
+    body:has(#drone:target)  nav a[href="#drone"],
+    body:has(#contact:target)nav a[href="#contact"],
+    body:not(:has(section:target)) nav a[href="#about"]{
+      color:var(--a); text-shadow:0 0 8px var(--a);
     }
 
-    nav a::before,
-    nav a::after {
-      content: "";
-      position: absolute;
-      height: 2px;
-      background: #ff1744;
-      opacity: 0;
-      transition: width 0.3s ease, opacity 0.3s ease;
-      width: 0;
-      box-shadow: 0 0 8px #ff1744;
+    body:has(#about:target)  nav a[href="#about"]::before,
+    body:has(#about:target)  nav a[href="#about"]::after,
+    body:has(#drone:target)  nav a[href="#drone"]::before,
+    body:has(#drone:target)  nav a[href="#drone"]::after,
+    body:has(#contact:target)nav a[href="#contact"]::before,
+    body:has(#contact:target)nav a[href="#contact"]::after,
+    body:not(:has(section:target)) nav a[href="#about"]::before,
+    body:not(:has(section:target)) nav a[href="#about"]::after{
+      width:100%; opacity:1;
     }
 
-    nav a::before {
-      top: 0;
-      left: 0;
-    }
+    a.mail{ color:var(--a); }
 
-    nav a::after {
-      bottom: 0;
-      right: 0;
-    }
-
-    nav a:hover,
-    nav a.active {
-      color: #ff1744;
-      text-shadow: 0 0 8px #ff1744, 0 0 16px rgba(255, 23, 68, 0.6);
-    }
-
-    nav a:hover::before,
-    nav a:hover::after,
-    nav a.active::before,
-    nav a.active::after {
-      opacity: 1;
-      width: 100%;
-    }
-
-    section {
-      display: none;
-      opacity: 0;
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 26px;
-      font-size: 16.5px;
-      background: rgba(10, 10, 20, 0.7);
-      border: 1px solid rgba(255, 23, 68, 0.15);
-      border-left: 3px solid #ff1744;
-      border-right: 3px solid #ff1744;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(255, 23, 68, 0.15);
-      transition: opacity 0.6s ease;
-    }
-
-    section.show {
-      display: block;
-      opacity: 1;
-    }
-
-    .work-entry { margin-bottom: 22px; }
-    .work-title { font-weight: 600; }
-    .work-meta { font-size: 14px; color: #888; margin-left: 12px; }
-    .work-link {
-      color: #ff1744;
-      font-size: 14px;
-      margin-left: 6px;
-      text-decoration: none;
-      transition: text-shadow 0.3s ease;
-    }
-    .work-link:hover { text-shadow: 0 0 6px #ff1744; }
-
-    @media (max-width: 768px) {
-      h1 { letter-spacing: 3px; }
-      nav { gap: 18px; }
-      nav a { font-size: 14px; padding: 6px 12px; }
-      section { margin: 24px; font-size: 15px; padding: 20px; }
-    }
-
-    @media (max-width: 480px) {
-      nav { gap: 12px; }
-      nav a { padding: 4px 8px; font-size: 13.5px; }
-      section { margin: 16px; font-size: 14.5px; padding: 18px; }
+    @media (max-width:600px){
+      h1{ letter-spacing:3px; }
+      section{ margin:18px; padding:18px; }
+      nav{ gap:12px; }
+      nav a{ padding:6px 10px; font-size:14px; }
     }
   </style>
 </head>
+
 <body>
   <header><h1>Sid Hegde</h1></header>
 
   <nav>
-    <a href="#" data-section="about">About Me</a>
-    <a href="#" data-section="work">Work</a>
-    <a href="#" data-section="contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="#drone">Drone</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
-    <p>Electrical Engineering student at West Point. Expected to commission May 2026. Interests include reading, flying FPV, and working on things.</p>
+    <p>Electrical Engineering student at West Point. Expected to commission May 2026 as an Armor Officer. Interests include reading, flying FPV drones, firearms, and working on my car.</p>
     <p><em>"Men who have made these discoveries before us are not our masters, but our guides. Truth lies open for all; it has not yet been monopolized. And there is plenty of it left even for posterity to discover." – Seneca</em></p>
   </section>
 
-  <section id="work">
-    <div class="work-entry">
-      <p class="work-title"><strong>Space and Missile Defense Command – Technical Center</strong></p>
-      <p class="work-meta">Redstone Arsenal, Alabama — 2023</p>
-    </div>
-    <div class="work-entry">
-      <p class="work-title"><strong>3rd Multi-Domain Task Force – Space Control Team</strong></p>
-      <p class="work-meta">Okinawa Prefecture, Japan — 2024</p>
-    </div>
-    <div class="work-entry">
-      <p class="work-title"><strong>Orion Space Solutions (Arcfield)</strong></p>
-      <p class="work-meta">Boulder, Colorado — 2025</p>
-    </div>
-    <div class="work-entry">
-      <p class="work-title"><strong>Distributed Sensor Array for Space Weather Characterization</strong>
-        <a href="sensorarray​.pdf" target="_blank" class="work-link">[PDF]</a>
-      </p>
-    </div>
-    <div class="work-entry">
-      <p class="work-title"><strong>Flexible Ground Suite – RF</strong>
-        <a href="Flexible Ground Suite - RF.pdf" target="_blank" class="work-link">[PDF]</a>
-      </p>
-    </div>
+  <section id="drone">
+      <div style="position:relative; padding-top:56.25%;">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/kddPiC_z_9o"
+          title="Drone Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin"
+          style="
+            position:absolute; inset:0;
+            width:100%; height:100%;
+            border:1px solid rgba(255,23,68,.25);
+            box-shadow:0 0 12px rgba(255,23,68,.25);
+            border-radius:6px;
+            background:#000;
+          ">
+        </iframe>
+  </div>
   </section>
 
   <section id="contact">
-    <p><strong>Email:</strong> <a href="mailto:1@hegdesid.com" class="work-link">1@hegdesid.com</a></p>
+    <p><strong>Email:</strong> <a class="mail" href="mailto:1@hegdesid.com">1@hegdesid.com</a></p>
   </section>
-
-  <script>
-    const navLinks = document.querySelectorAll('nav a');
-    const sections = document.querySelectorAll('section');
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        const id = link.dataset.section;
-
-        // Toggle sections
-        sections.forEach(sec => sec.classList.remove('show'));
-        document.getElementById(id).classList.add('show');
-
-        // Toggle active state
-        navLinks.forEach(a => a.classList.remove('active'));
-        link.classList.add('active');
-        link.setAttribute('aria-current', 'page');
-      });
-    });
-
-    // Show "About Me" by default
-    document.querySelector('nav a[data-section="about"]').click();
-  </script>
 </body>
 </html>
